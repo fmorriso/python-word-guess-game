@@ -40,7 +40,7 @@ def guess_word(secret_word: str):
             print('That letter is in the word!')
             dashes = update_dashes(secret_word, dashes, letter)
 
-        print(f'You have {guesses_left} guesses remaining')
+        print(f'{guesses_left} incorrect guesses remaining')
 
     if dashes == secret_word:
         print(f'Congrats! You win. The word was: {secret_word}')
