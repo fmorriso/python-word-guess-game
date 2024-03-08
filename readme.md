@@ -61,3 +61,28 @@ egg-----
 8 incorrect guesses left.
 Guess: 
 ```
+### Part 4
+In this exercise, you are going to add a little bit of code to allow your program to randomly select a word from a list of words.
+
+End Result
+
+Once you’ve finished the two steps below, your program should use a random word from your list each time you play!
+
+#### Step 1 - Make a List
+
+First, make a list of strings called ```words```. 
+Each string should be a word that your game might use.
+
+#### Step 2 - Pick From the List
+
+Then, instead of assigning a particular string to ```secret_word```, 
+use a function called ```choice``` contained in the ```random``` module. Here’s how to do it:
+
+At the top of your program, write 
+```python
+import random
+```
+You can then use the function ```random.choice```. 
+It takes a single argument - in this case, a list - and it returns a random element from that argument. 
+Use this function when you assign to secret_word near the beginning of your program.
+
