@@ -1,3 +1,4 @@
+import random
 import sys
 
 
@@ -50,5 +51,6 @@ def guess_word(secret_word: str):
 
 if __name__ == '__main__':
     print(f'Word Guess Game using python: {get_python_version()}')
-    secret_word = 'turtle'
+    words = ['rabbit', 'banana', 'egg', 'turtle']
+    secret_word = random.choice(words)
     guess_word(secret_word)
