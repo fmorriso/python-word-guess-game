@@ -43,7 +43,7 @@ Before printing your prompt that says ```“Guess: “```, print the value of yo
 
 Here’s the tricky part. 
 Write a function called 
-```python
+```text
 update_dashes
 ``` 
 that takes three string arguments:
