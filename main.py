@@ -26,7 +26,7 @@ def update_dashes(word: str, dashes: str, guess: str) -> str:
     return dashes
 
 
-def guess_word(secret: str):
+def guess_word(secret: str) -> None:
     dashes = '-' * len(secret)
     guesses_left = 10
     while guesses_left > 0 and dashes != secret:
