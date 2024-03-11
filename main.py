@@ -15,38 +15,38 @@ def get_guess() -> str:
             return guess
 
 
-def update_dashes(secret_word: str, dashes: str, guess: str) -> str:
+def update_dashes(word: str, dashes: str, guess: str) -> str:
     dash_parts = list(dashes)
 
-    for i in range(len(secret_word)):
-        if secret_word[i] == guess:
+    for i in range(len(word)):
+        if word[i] == guess:
             dash_parts[i] = guess
 
-    retval = "".join(dash_parts)
-    return retval
+    dashes = "".join(dash_parts)
+    return dashes
 
 
-def guess_word(secret_word: str):
-    dashes = '-' * len(secret_word)
+def guess_word(secret: str):
+    dashes = '-' * len(secret)
     guesses_left = 10
-    while guesses_left > 0 and dashes != secret_word:
+    while guesses_left > 0 and dashes != secret:
         print(dashes)
         print(f'{guesses_left} incorrect guesses left.')
         letter = get_guess()
-        idx = secret_word.find(letter)
+        idx = secret.find(letter)
         if idx == -1:
             print('That letter is not in the word.')
             guesses_left -= 1
         else:
             print('That letter is in the word!')
-            dashes = update_dashes(secret_word, dashes, letter)
+            dashes = update_dashes(secret, dashes, letter)
 
         print(f'{guesses_left} incorrect guesses remaining')
 
-    if dashes == secret_word:
-        print(f'Congrats! You win. The word was: {secret_word}')
+    if dashes == secret:
+        print(f'Congrats! You win. The word was: {secret}')
     else:
-        print(f'Sorry, you lose. The word was: {secret_word}')
+        print(f'Sorry, you lose. The word was: {secret}')
 
 
 if __name__ == '__main__':
